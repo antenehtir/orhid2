@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchid Cafe & Restaurant | Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-leaf logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Orchid Cafe & Restaurant</h1>
+                    <p>WELLNESS • COMFORT • ETHIOPIAN TOUCH</p>
+                </div>
+            </div>
+            
+            <div class="header-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Civil Service, NOC Building, Next to NOC Gas Station</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Open Daily: 7:00 AM - 10:00 PM</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+251 123 456 789</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Navigation -->
+    <div class="container">
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="all">All Menu</button>
+            <button class="category-btn" data-category="drinks">Drinks & Coffee</button>
+            <button class="category-btn" data-category="breakfast">Breakfast & Brunch</button>
+            <button class="category-btn" data-category="lunch">Lunch & Light Bites</button>
+            <button class="category-btn" data-category="ethiopian">Ethiopian Specialties</button>
+            <button class="category-btn" data-category="wellness">Wellness Corner</button>
+            <button class="category-btn" data-category="desserts">Desserts & Treats</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Drinks & Coffee Section -->
+        <section id="drinks" class="menu-section">
+            <div class="section-header">
+                <i class="fas fa-coffee section-icon"></i>
+                <div>
+                    <h2>Drinks & Coffee</h2>
+                    <p>Ethiopian single-origin coffee & wellness beverages</p>
+                </div>
+                <span class="section-subtitle">Served 7am-10pm</span>
+            </div>
+            
+            <div class="menu-items">
+                <!-- Coffee Items -->
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Ethiopian Yirgacheffe Pour Over</h3>
+                        <div class="item-price">4.95</div>
+                    </div>
+                    <p class="item-description">Single-origin, light roast with floral notes and bright citrus finish. Ethically sourced.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag signature">Signature</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Orchid Latte</h3>
+                        <div class="item-price">5.50</div>
+                    </div>
+                    <p class="item-description">Our signature latte with house-made orchid syrup, oat milk, and a hint of cardamom.</p>
+                    <div class="item-tags">
+                        <span class="tag signature">Signature</span>
+                        <span class="tag vegan">Vegan Option</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Turmeric Golden Milk</h3>
+                        <div class="item-price">5.25</div>
+                    </div>
+                    <p class="item-description">Anti-inflammatory turmeric, ginger, cinnamon, and black pepper in almond milk.</p>
+                    <div class="item-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag vegan">Vegan</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Fresh Mint & Ginger Tea</h3>
+                        <div class="item-price">4.25</div>
+                    </div>
+                    <p class="item-description">Hand-picked fresh mint leaves with grated ginger, soothing and refreshing.</p>
+                    <div class="item-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Fresh Beetroot & Apple Juice</h3>
+                        <div class="item-price">6.75</div>
+                    </div>
+                    <p class="item-description">Cold-pressed beetroot, apple, carrot, and lemon for natural energy and vitality.</p>
+                    <div class="item-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag healthy">Healthy</span>
+                        <span class="tag vegan">Vegan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breakfast & Brunch Section -->
+        <section id="breakfast" class="menu-section">
+            <div class="section-header">
+                <i class="fas fa-egg section-icon"></i>
+                <div>
+                    <h2>Breakfast & All-Day Brunch</h2>
+                    <p>Fuel your day with wholesome morning favorites</p>
+                </div>
+                <span class="section-subtitle">Served until 2pm</span>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-item today-special">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Injera Benedict</h3>
+                        <div class="item-price">14.95</div>
+                    </div>
+                    <p class="item-description">Poached eggs on soft Ethiopian injera with spinach, tomato, and turmeric hollandaise.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian Fusion</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Avocado & Herb Smash</h3>
+                        <div class="item-price">13.50</div>
+                    </div>
+                    <p class="item-description">Mashed avocado with lime, cilantro, and chili flakes on seeded toast. Add poached egg +3.50.</p>
+                    <div class="item-tags">
+                        <span class="tag vegan">Vegan Option</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Teff Pancake Stack</h3>
+                        <div class="item-price">12.95</div>
+                    </div>
+                    <p class="item-description">Fluffy pancakes made with nutrient-rich Ethiopian teff flour, served with honey and fresh berries.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag gluten-free">Gluten-Free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lunch & Light Bites Section -->
+        <section id="lunch" class="menu-section">
+            <div class="section-header">
+                <i class="fas fa-utensils section-icon"></i>
+                <div>
+                    <h2>Lunch & Light Bites</h2>
+                    <p>Nourishing meals for midday refreshment</p>
+                </div>
+                <span class="section-subtitle">Served 11am-4pm</span>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Quinoa & Roasted Vegetable Bowl</h3>
+                        <div class="item-price">15.95</div>
+                    </div>
+                    <p class="item-description">Protein-packed quinoa with seasonal roasted vegetables, avocado, and lemon-tahini dressing.</p>
+                    <div class="item-tags">
+                        <span class="tag vegan">Vegan</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Ethiopian Lentil Wrap</h3>
+                        <div class="item-price">12.50</div>
+                    </div>
+                    <p class="item-description">Spiced Ethiopian lentils, fresh greens, and yogurt sauce in a whole wheat wrap.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag vegan">Vegan Option</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Grilled Chicken & Avocado Sandwich</h3>
+                        <div class="item-price">16.50</div>
+                    </div>
+                    <p class="item-description">Herb-marinated chicken breast, avocado, spinach, and sun-dried tomato aioli on whole grain bread.</p>
+                    <div class="item-tags">
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ethiopian Specialties Section -->
+        <section id="ethiopian" class="menu-section ethiopian-section">
+            <div class="ethiopian-header">
+                <div class="section-header">
+                    <i class="fas fa-globe-africa section-icon"></i>
+                    <div>
+                        <h2>Ethiopian Specialties</h2>
+                        <p>Authentic flavors with a health-conscious twist</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Vegetarian Platter (Ye'abesha Gomen)</h3>
+                        <div class="item-price">18.95</div>
+                    </div>
+                    <p class="item-description">A colorful selection of spiced lentils, collard greens, cabbage, and carrots served with injera.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag vegan">Vegan</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Doro Wat (Chicken Stew)</h3>
+                        <div class="item-price">21.50</div>
+                    </div>
+                    <p class="item-description">Traditional Ethiopian chicken stew with berbere spice, served with injera and hard-boiled egg.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag signature">Signature</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Teff Injera Basket</h3>
+                        <div class="item-price">5.95</div>
+                    </div>
+                    <p class="item-description">Freshly baked 100% teff injera, gluten-free and rich in iron and minerals.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag gluten-free">Gluten-Free</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wellness Corner Section -->
+        <section id="wellness" class="menu-section wellness-corner">
+            <div class="section-header">
+                <i class="fas fa-heart section-icon"></i>
+                <div>
+                    <h2>Wellness Corner</h2>
+                    <p>Nourishing options for mindful eating</p>
+                </div>
+                <span class="section-subtitle">Doctor-recommended</span>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Immune-Booster Salad</h3>
+                        <div class="item-price">14.95</div>
+                    </div>
+                    <p class="item-description">Kale, spinach, citrus segments, almonds, and ginger-turmeric dressing packed with vitamins.</p>
+                    <div class="item-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag vegan">Vegan</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Gut-Friendly Bowl</h3>
+                        <div class="item-price">16.50</div>
+                    </div>
+                    <p class="item-description">Fermented foods, sauerkraut, kimchi, probiotic yogurt, and sprouted grains for digestive health.</p>
+                    <div class="item-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Omega-3 Power Plate</h3>
+                        <div class="item-price">17.95</div>
+                    </div>
+                    <p class="item-description">Wild salmon, flax seeds, walnuts, and avocado for heart and brain health.</p>
+                    <div class="item-tags">
+                        <span class="tag wellness">Wellness</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts & Treats Section -->
+        <section id="desserts" class="menu-section">
+            <div class="section-header">
+                <i class="fas fa-ice-cream section-icon"></i>
+                <div>
+                    <h2>Desserts & Sweet Treats</h2>
+                    <p>Guilt-free indulgence with natural sweetness</p>
+                </div>
+                <span class="section-subtitle">Sweet endings</span>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Teff Flour Brownie</h3>
+                        <div class="item-price">6.95</div>
+                    </div>
+                    <p class="item-description">Rich, fudgy brownie made with teff flour and sweetened with dates. Gluten-free.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian</span>
+                        <span class="tag gluten-free">Gluten-Free</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Chia Seed Pudding</h3>
+                        <div class="item-price">7.50</div>
+                    </div>
+                    <p class="item-description">Coconut milk chia pudding with fresh berries, mango, and a drizzle of local honey.</p>
+                    <div class="item-tags">
+                        <span class="tag vegan">Vegan Option</span>
+                        <span class="tag healthy">Healthy</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="item-name">Baklava (Ethiopian Style)</h3>
+                        <div class="item-price">8.25</div>
+                    </div>
+                    <p class="item-description">Flaky phyllo pastry with walnuts, pistachios, and honey syrup with a hint of berbere spice.</p>
+                    <div class="item-tags">
+                        <span class="tag ethiopian">Ethiopian Fusion</span>
+                        <span class="tag signature">Signature</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <h2>Visit Us Today</h2>
+            <p>Experience our cozy atmosphere, health-focused menu, and authentic Ethiopian touches.</p>
+            <p>Located in the Medical Plaza, we're committed to nourishing food that supports wellbeing.</p>
+            <a href="#" class="cta-btn">Make a Reservation</a>
+        </div>
+
+        <!-- Payment Methods Section -->
+        <div class="payment-section">
+            <div class="payment-header">
+                <h2>Easy & Secure Payment Options</h2>
+                <p>We accept multiple payment methods for your convenience</p>
+            </div>
+            
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="https://play-lh.googleusercontent.com/Mtnybz6w7FMdzdQUbc7PWN3_0iLw3t9lUkwjmAa_usFCZ60zS0Xs8o00BW31JDCkAiQk" alt="Telebirr" class="payment-logo">
+                    <div class="payment-name">Telebirr</div>
+                    <div class="payment-description">Mobile Payment</div>
+                </div>
+                
+                <div class="payment-method">
+                    <img src="https://images.seeklogo.com/logo-png/54/2/commercial-bank-of-ethiopia-logo-png_seeklogo-547506.png" alt="CBE Birr" class="payment-logo">
+                    <div class="payment-name">CBE Birr</div>
+                    <div class="payment-description">Mobile Banking</div>
+                </div>
+            </div>
+            
+            <p class="payment-note">Cash payments are also accepted. All major credit/debit cards coming soon!</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Orchid Cafe & Restaurant</h3>
+                    <p>A wellness-focused dining experience blending Ethiopian traditions with contemporary comfort food.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Civil Service, NOC Building, Next to NOC Gas Station</p>
+                    <p><i class="fas fa-phone"></i> +251 123 456 789</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <ul>
+                        <li><i class="far fa-clock"></i> Monday - Friday: 7am - 10pm</li>
+                        <li><i class="far fa-clock"></i> Saturday: 8am - 11pm</li>
+                        <li><i class="far fa-clock"></i> Sunday: 8am - 9pm</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Wellness Values</h3>
+                    <ul>
+                        <li><i class="fas fa-leaf"></i> Locally sourced ingredients</li>
+                        <li><i class="fas fa-heart"></i> Health-conscious preparation</li>
+                        <li><i class="fas fa-seedling"></i> Plant-forward options</li>
+                        <li><i class="fas fa-recycle"></i> Sustainable practices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Orchid Cafe & Restaurant. All rights reserved. | Part of the Medical Plaza Wellness Initiative</p>
+                <p style="margin-top: 10px;">Accepted Payments: Telebirr | CBE Birr | Cash</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
