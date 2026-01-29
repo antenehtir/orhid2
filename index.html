@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Orchid Cafe & Restaurant | Menu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -33,7 +38,7 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <span>+251985208888</span>
+                    <span>+251 123 456 789</span>
                 </div>
             </div>
         </div>
@@ -42,13 +47,27 @@
     <!-- Menu Navigation -->
     <div class="container">
         <div class="menu-categories">
-            <button class="category-btn active" data-category="all">All Menu</button>
-            <button class="category-btn" data-category="drinks">Drinks & Coffee</button>
-            <button class="category-btn" data-category="breakfast">Breakfast & Brunch</button>
-            <button class="category-btn" data-category="lunch">Lunch & Light Bites</button>
-            <button class="category-btn" data-category="ethiopian">Ethiopian Specialties</button>
-            <button class="category-btn" data-category="wellness">Wellness Corner</button>
-            <button class="category-btn" data-category="desserts">Desserts & Treats</button>
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-th-large"></i> <span>All</span>
+            </button>
+            <button class="category-btn" data-category="drinks">
+                <i class="fas fa-coffee"></i> <span>Drinks</span>
+            </button>
+            <button class="category-btn" data-category="breakfast">
+                <i class="fas fa-egg"></i> <span>Breakfast</span>
+            </button>
+            <button class="category-btn" data-category="lunch">
+                <i class="fas fa-utensils"></i> <span>Lunch</span>
+            </button>
+            <button class="category-btn" data-category="ethiopian">
+                <i class="fas fa-globe-africa"></i> <span>Ethiopian</span>
+            </button>
+            <button class="category-btn" data-category="wellness">
+                <i class="fas fa-heart"></i> <span>Wellness</span>
+            </button>
+            <button class="category-btn" data-category="desserts">
+                <i class="fas fa-ice-cream"></i> <span>Desserts</span>
+            </button>
         </div>
     </div>
 
@@ -383,12 +402,24 @@
             </div>
         </section>
 
-        <!-- Call to Action -->
+        <!-- Call to Action with Rate Us Button -->
         <div class="cta">
             <h2>Visit Us Today</h2>
             <p>Experience our cozy atmosphere, health-focused menu, and authentic Ethiopian touches.</p>
             <p>Located in the Medical Plaza, we're committed to nourishing food that supports wellbeing.</p>
-            <a href="#" class="cta-btn">Make a Reservation</a>
+            <div class="cta-button-group">
+                <a href="tel:+251123456789" class="cta-btn">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="#" class="cta-btn secondary">
+                    <i class="fas fa-calendar"></i> Reserve
+                </a>
+                <!-- RATE US BUTTON WITH GOOGLE SEARCH LINK -->
+                <a href="https://www.google.com/search?q=orchid+cafe+and+restaurant&rlz=1CDGOYI_enUS862US862&oq=orchi&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIGCAAQRRg5MgwIARAjGCcYgAQYigUyBggCECMYJzIKCAMQLhixAxiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIJCAkQABgKGIAE0gEIMTc5OWowajSoAgKwAgHiAwQYASBf&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#ebo=0" target="_blank" class="cta-btn rate-btn">
+                    <i class="fas fa-star"></i> Rate Us
+                </a>
+            </div>
+            <p class="cta-note">Love your experience? Help others discover us by leaving a review!</p>
         </div>
 
         <!-- Payment Methods Section -->
@@ -425,6 +456,12 @@
                     <p>A wellness-focused dining experience blending Ethiopian traditions with contemporary comfort food.</p>
                     <p><i class="fas fa-map-marker-alt"></i> Civil Service, NOC Building, Next to NOC Gas Station</p>
                     <p><i class="fas fa-phone"></i> +251 123 456 789</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
@@ -450,11 +487,19 @@
             <div class="copyright">
                 <p>&copy; 2023 Orchid Cafe & Restaurant. All rights reserved. | Part of the Medical Plaza Wellness Initiative</p>
                 <p style="margin-top: 10px;">Accepted Payments: Telebirr | CBE Birr | Cash</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">
+                    <i class="fas fa-comment-alt"></i> We value your feedback! 
+                    <a href="https://www.google.com/search?q=orchid+cafe+and+restaurant&rlz=1CDGOYI_enUS862US862&oq=orchi&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIGCAAQRRg5MgwIARAjGCcYgAQYigUyBggCECMYJzIKCAMQLhixAxiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIJCAkQABgKGIAE0gEIMTc5OWowajSoAgKwAgHiAwQYASBf&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#ebo=0" target="_blank" style="color: var(--accent);">Leave us a review online</a>.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
-
 </html>
