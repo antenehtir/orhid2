@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.querySelector('.back-to-top');
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const menuCategories = document.querySelector('.menu-categories');
+    const menuItems = document.querySelectorAll('.menu-item');
     
     // Function to show all menu sections
     function showAllSections() {
@@ -43,6 +44,99 @@ document.addEventListener('DOMContentLoaded', function() {
             button.style.transform = '';
         }, 150);
     }
+    
+    // Enhanced menu item selection with visual effects
+    function setupMenuItemSelection() {
+        menuItems.forEach(item => {
+            // Click event for menu items
+            item.addEventListener('click', function() {
+                // Remove selected class from all items
+                menuItems.forEach(i => {
+                    i.classList.remove('selected');
+                    i.style.zIndex = '';
+                });
+                
+                // Add selected class to clicked item
+                this.classList.add('selected');
+                this.style.zIndex = '20';
+                
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = event.clientX - rect.left - size / 2;
+                const y = event.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(245, 162, 93, 0.3);
+                    transform: scale(0);
+                    animation: itemRipple 0.6s linear;
+                    width: ${size}px;
+                    height: ${size}px;
+                    top: ${y}px;
+                    left: ${x}px;
+                    pointer-events: none;
+                    z-index: 1;
+                `;
+                
+                this.appendChild(ripple);
+                
+                // Remove ripple after animation
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+                
+                // Haptic feedback on mobile
+                if (window.innerWidth < 768 && navigator.vibrate) {
+                    navigator.vibrate(15);
+                }
+                
+                // Auto-deselect after 3 seconds
+                setTimeout(() => {
+                    if (this.classList.contains('selected')) {
+                        this.classList.remove('selected');
+                        this.style.zIndex = '';
+                    }
+                }, 3000);
+            });
+            
+            // Touch feedback for mobile
+            item.addEventListener('touchstart', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+                this.style.opacity = '0.95';
+            });
+            
+            item.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.opacity = '';
+                }, 200);
+            });
+            
+            // Keyboard navigation support
+            item.setAttribute('tabindex', '0');
+            item.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+    }
+    
+    // Add CSS for item ripple animation
+    const itemRippleStyle = document.createElement('style');
+    itemRippleStyle.textContent = `
+        @keyframes itemRipple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(itemRippleStyle);
     
     // Add click event listeners to category buttons
     categoryButtons.forEach(button => {
@@ -96,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe all menu items
-    document.querySelectorAll('.menu-item').forEach(item => {
+    menuItems.forEach(item => {
         item.style.opacity = '0';
         observer.observe(item);
     });
@@ -306,6 +400,9 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
     
+    // Initialize menu item selection
+    setupMenuItemSelection();
+    
     // Initialize first load
     if (window.innerWidth < 768) {
         // Auto-scroll active category into view on mobile
@@ -366,4 +463,14 @@ document.addEventListener('DOMContentLoaded', function() {
             lastScrollTop = scrollTop;
         }
     }, { passive: true });
+    
+    // Add subtle parallax effect to background
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * 0.1;
+        const bodyBg = document.querySelector('body::before');
+        
+        // Update CSS custom property for parallax
+        document.documentElement.style.setProperty('--parallax-offset', `${rate}px`);
+    });
 });
